@@ -1,0 +1,122 @@
+body {
+  background-image: url("../images/gems-repeat-bg.jpg");
+
+}
+
+.header {
+  background-image: url("../images/crystals-bgi.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 10px;
+}
+
+#instructions {
+  background-color: white;
+}
+
+#goalBox,
+#scoreBox {
+  max-width: 300px;
+  height: 125px;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  margin: 50px 20px 20px 20px;
+}
+
+#goalBox {
+  border: 3px solid blue;
+  align-content: center;
+  /*margin-right: 40px;*/
+}
+
+#scoreBox {
+  border: 3px solid red;
+
+}
+
+#rdmNum,
+#guessTot {
+  align-self: center
+}
+
+#crystalsRow {
+  padding: 50px;
+}
+
+#crystalImage {
+  width: 150px;
+  height: 150px;
+}
+
+#imgBox {
+  min-width: 270px;
+}
+
+/* desktop */
+@media only screen and (max-width: 980px) {
+
+  #crystalImage {
+    width: 120px;
+    height: 120px;
+  }
+
+  #goalBox,
+  #scoreBox {
+    margin: 50px 20px 20px 20px;
+  }
+
+}
+
+/* tablet */
+@media only screen and (max-width: 768px) {
+
+  #crystalImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  #goalBox,
+  #scoreBox {
+    margin: 40px 20px 20px 20px;
+  }
+
+}
+
+/* phone */
+@media only screen and (max-width: 640px) {
+
+  .header h1 {
+    font-size: 175%;
+  }
+
+  #iBtn {
+    display: none;
+  }
+
+  #goalBox,
+  #scoreBox {
+    margin: 30px 20px 20px 15px;
+  }
+  #crystalImage {
+    width: 75px;
+    height: 75px;
+  }
+
+  #crystalsRow {
+    padding: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 525px) {
+
+  #goalBox,
+  #scoreBox  {
+    margin-right: 0;
+    margin: 25px 20px 20px 20px;
+  }
+
+}

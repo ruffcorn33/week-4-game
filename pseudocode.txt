@@ -1,0 +1,18 @@
+Crystal Collector
+
+
+Initialize variables and text for wins and losses.  Set isEnd to false.
+
+Generate a random number between 12 and 120 for goal.  Display it.
+
+Generate 4 random numbers between 1 and 12 and assign each to one crystal.
+
+One event listener that gets the value from clicking a crystal.
+
+    The event listener calls a math routine that will add the number to a total.
+    If total number === goal number --> wins
+    else if total number > goal number --> losses
+    else get another numbers
+
+    if win or lose, update those counters and the clear total, generate new
+    goal, start again.

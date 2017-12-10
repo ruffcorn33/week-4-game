@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>wireframe</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div class="header">
+      <h1>Crystals Collector</h1>
+    </div>
+
+    <div class="container-fluid align-content-center">
+      <div id="iBtn" class="row">
+        <a href="#instructions" class="btn btn-info" data-toggle="collapse">Instructions</a>
+        <div id="instructions" class="collapse px-5 pt-2">
+          <p class="">You will be given a random number at the start of the game.
+            <br>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.
+            <br>You will win the game by matching your total score to the the random number and you will lose the game if your score goes over it.
+            <br>The value of each crystal is hidden from you until you click on it.
+            <br>Each time you play, the game will change the hidden values of each crystal.
+          </p>
+        </div>
+      </div>
+
+      <div class="container align-content-center">
+
+        <div class="row px-5 justify-content-md-center">
+          <div id = "goalBox" class="col-sm-4">
+            <h4 id="rdmNum">?</h4>
+            <hr>
+            <h4 id="guessTot">?</h4>
+          </div>
+          <div id = "scoreBox" class="col-sm-4 pl-5">
+            <div id="winLossMsg" class="row">you win!</div>
+            <div class="row">Wins: <span id="winScore">0</span></div>
+            <div class="row">Losses: <span id="lossScore">0</span></div>
+          </div>
+        </div>
+
+        <div id="crystalsRow" class="row align-content-center">
+          <div id= "imageBox" class="mx-auto">
+            <div class="row">
+              <img id="crystalImage" src="assets/images/crystalc3.jpg" alt="crystal">
+              <img id="crystalImage" src="assets/images/crystalc4.jpg" alt="crystal">
+              <!-- </div>
+              <div class="row"> -->
+              <img id="crystalImage" src="assets/images/crystalc2.jpg" alt="crystal">
+              <img id="crystalImage" src="assets/images/crystalc1.jpg" alt="crystal">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <script src="assets/javascript/game.js"></script>
+  </body>
+</html>
