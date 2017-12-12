@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  // Declare variables
+  // declare variables
 
   var rdmNumber;
   var guessTotal = 0;
@@ -10,13 +10,14 @@ $(document).ready(function(){
   var lossCnt = 0;
   var isEnd = false;
 
+
   getRdmNumber = function(min, max){
     return Math.floor(Math.random() * (max - min) + min);
   }
 
   fillGemValues = function(x) {
     if (jQuery.inArray( y, gemValues ) === -1){
-      debugger;
+      //debugger;
       gemValues.push(x);
     }
   }
@@ -38,6 +39,8 @@ $(document).ready(function(){
 
   $(".image").on("click", function() {
     document.getElementById('guessTot').innerHTML = guessTotal = (guessTotal + gemValues[$(this).attr('value')]);
+    var clinkAudio = document.getElementById("clink");
+    clinkAudio.play();
     if (guessTotal === rdmNumber) {
       winCnt++;
       document.getElementById('winScore').innerHTML = winCnt;
