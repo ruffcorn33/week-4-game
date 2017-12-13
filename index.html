@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>wireframe</title>
+    <title>Crystals Collector</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -12,8 +12,23 @@
   </head>
   <body>
 
-    <audio id="clink">
-      <source src="assets/sounds/clink.wav" type="audio/wav">
+    <audio id="ping">
+      <source src="assets/sounds/ping.mp3" type="audio/mp3">
+      Your browser does not support mp3 files.
+    </audio>
+
+    <audio id="break">
+      <source src="assets/sounds/glass-break.wav" type="audio/wav">
+      Your browser does not support wav files.
+    </audio>
+
+    <audio id="success">
+      <source src="assets/sounds/success.wav" type="audio/wav">
+      Your browser does not support wav files.
+    </audio>
+
+    <audio id="imgBoxHover" loop>
+      <source src="assets/sounds/imgBoxHover.wav" type="audio/wav">
       Your browser does not support wav files.
     </audio>
 
@@ -42,20 +57,26 @@
             <hr>
             <h4 id="guessTot">?</h4>
           </div>
-          <div id = "scoreBox" class="col-sm-4 pl-5">
-            <div id="winLossMsg" class="row">you win!</div>
-            <div class="row">Wins: <span id="winScore">0</span></div>
-            <div class="row">Losses: <span id="lossScore">0</span></div>
-          </div>
         </div>
 
         <div id="crystalsRow" class="row align-content-center">
           <div id= "imageBox" class="mx-auto">
-            <div class="row">
+            <div id="crystals" class="row">
               <img id="crystalImage" class="image" src="assets/images/crystalc3.png" alt="crystal" value=0>
               <img id="crystalImage" class="image" src="assets/images/crystalc4.png" alt="crystal" value=1>
               <img id="crystalImage" class="image" src="assets/images/crystalc2.png" alt="crystal" value=2>
               <img id="crystalImage" class="image" src="assets/images/crystalc1.png" alt="crystal" value=3>
+            </div>
+          </div>
+        </div>
+
+        <div id="messageRow" class="row align-content-center" style="display: none"></div>
+
+        <div class="row px-5 justify-content-md-center">
+          <div id = "scoreBox" class="col-sm-4 pl-5">
+            <div class="row">
+              <div class="col-sm"><h5>Wins: <span id="winScore">0</span></h5></div>
+              <div class="col-sm"><h5>Losses: <span id="lossScore">0</span></h5></div>
             </div>
           </div>
         </div>

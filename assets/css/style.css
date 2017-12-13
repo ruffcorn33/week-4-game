@@ -1,5 +1,5 @@
 body {
-  background-image: url("../images/gems-repeat-bg.jpg");
+  background-image: url("../images/dark-triangles.png");
 
 }
 
@@ -19,23 +19,25 @@ body {
 
 #goalBox,
 #scoreBox {
-  max-width: 300px;
-  height: 125px;
+  background-image: url("../images/random_grey_variations.png");
+  width: 300px;
   padding: 20px;
   background-color: white;
   text-align: center;
-  margin: 50px 20px 20px 20px;
+  margin: 20px 0px 10px 0px;
+  align-content: center;
+  color: white;
 }
 
 #goalBox {
-  border: 3px solid blue;
-  align-content: center;
-  /*margin-right: 40px;*/
+  height: 130px;
+  border: 5px solid blue;
 }
 
 #scoreBox {
-  border: 3px solid red;
-
+  border: 5px solid red;
+  text-align: left;
+  height: 80px;
 }
 
 #rdmNum,
@@ -43,8 +45,18 @@ body {
   align-self: center
 }
 
+hr {
+  width: 80%;
+  height: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:#fff;
+  color:inherit;
+  border: 0 none;
+}
+
 #crystalsRow {
-  padding: 50px;
+  padding: 20px;
 }
 
 #crystalImage {
@@ -56,7 +68,18 @@ body {
   min-width: 270px;
 }
 
-img:hover{opacity: .75} 
+img {opacity: .75}
+
+img:hover{opacity: 1}
+
+#messageSpan {
+  font-size: 100px;
+  color: green;
+  margin: 0 auto 0 auto;
+}
+
+
+/* Media queries */
 
 /* desktop */
 @media only screen and (max-width: 980px) {
@@ -66,10 +89,10 @@ img:hover{opacity: .75}
     height: 120px;
   }
 
-  #goalBox,
+  /* #goalBox,
   #scoreBox {
-    margin: 50px 20px 20px 20px;
-  }
+    margin: 50px 0px 20px 0px;
+  } */
 
 }
 
@@ -81,10 +104,10 @@ img:hover{opacity: .75}
     height: 100px;
   }
 
-  #goalBox,
+  /* #goalBox,
   #scoreBox {
-    margin: 40px 20px 20px 20px;
-  }
+    margin: 40px 0px 20px 0px;
+  } */
 
 }
 
@@ -95,14 +118,19 @@ img:hover{opacity: .75}
     font-size: 175%;
   }
 
-  #iBtn {
+  /* #iBtn {
     display: none;
+  } */
+
+  /* #goalBox,
+  #scoreBox {
+    margin: 30px 0px 20px 0px;
+  } */
+
+  #scoreBox {
+    height: 100px;
   }
 
-  #goalBox,
-  #scoreBox {
-    margin: 30px 20px 20px 15px;
-  }
   #crystalImage {
     width: 75px;
     height: 75px;
@@ -110,6 +138,12 @@ img:hover{opacity: .75}
 
   #crystalsRow {
     padding: 20px;
+  }
+
+  #messageSpan {
+    font-size: 80px;
+    color: green;
+    margin: 0 auto 0 auto;
   }
 
 }
