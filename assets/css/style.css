@@ -1,6 +1,5 @@
 body {
   background-image: url("../images/dark-triangles.png");
-
 }
 
 .header {
@@ -267,13 +266,6 @@ and (orientation: portrait) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
   /* Styles */
-  /* .landscape {
-    display: flex;
-  }
-
-  .portrait {
-    display: none;
-  } */
 
   #crystalImage {
     width: 150px;
