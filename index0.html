@@ -2,11 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
     <title>Crystals Collector</title>
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
@@ -35,7 +34,7 @@
       </audio>
 
     </div>
-
+    
     <div class="header">
       <h1>Crystals Collector</h1>
     </div>
@@ -53,31 +52,20 @@
         </div>
       </div>
 
-      <div class="container justify-content-md-center mt-5 game">
-        <div id="goalBoxContainer" class="row justify-content-md-center portrait">
+      <div class="container justify-content-md-center mt-3">
+
+        <div class="row justify-content-md-center">
           <div id="goalBox" class="col-sm-12 mx-auto">
             <p id="hint">Click the crystals to add up to the number below!</p>
-            <h4 id="rdmNum1">?</h4>
-            <hr>
-            <h4 id="guessTot1">?</h4>
-          </div>
-        </div>
-        <div id="statsBox" class="row justify-content-md-center landscape">
-          <div id="goalBox" class="col-sm-6 my-0 mx-1 pt-2">
             <h4 id="rdmNum">?</h4>
             <hr>
             <h4 id="guessTot">?</h4>
           </div>
-          <div id="scoreBox" class="col-sm-6 my-0 px-1 mx-1">
-            <div class="row px-2">
-              <div id='wins' class="col-sm-5"><p>Wins: <span id="winScore">0</span></p></div>
-              <div id='losses' class="col-sm-5"><p>Losses: <span id="lossScore">0</span></p></div>
-            </div>
-          </div>
         </div>
-        <div id="crystalsRow" class="row justify-content-md-center landscape">
+
+        <div id="crystalsRow" class="row justify-content-md-center">
           <div id= "imageBox" class="mx-auto">
-            <div id="crystals" class="row justify-content-md-center">
+            <div id="crystals" class="row">
               <img id="crystalImage" class="image" src="assets/images/crystalc3.png" alt="crystal" value=0>
               <img id="crystalImage" class="image" src="assets/images/crystalc4.png" alt="crystal" value=1>
               <img id="crystalImage" class="image" src="assets/images/crystalc2.png" alt="crystal" value=2>
@@ -85,35 +73,21 @@
             </div>
           </div>
         </div>
-        <div id="crystalsRow1" class="row justify-content-md-center portrait">
-          <div id= "imageBox" class="mx-auto">
-            <div id="crystals0" class="row justify-content-md-center">
-              <img id="crystalImage" class="image" src="assets/images/crystalc3.png" alt="crystal" value=0>
-              <img id="crystalImage" class="image" src="assets/images/crystalc4.png" alt="crystal" value=1>
-            </div>
-            <div id="crystals1" class="row justify-content-md-center">
-              <img id="crystalImage" class="image" src="assets/images/crystalc2.png" alt="crystal" value=2>
-              <img id="crystalImage" class="image" src="assets/images/crystalc1.png" alt="crystal" value=3>
-            </div>
-          </div>
-        </div>
+
         <div id="messageRow" class="row justify-content-md-center" style="display: none"></div>
-        <div id="scoreBoxContainer" class="row justify-content-md-center portrait">
+
+        <div class="row justify-content-md-center">
           <div id = "scoreBox" class="col-sm-12 mx-auto">
             <div class="row px-2">
-              <div id='wins' class="col-sm"><h5>Wins: <span id="winScore1">0</span></h5></div>
-              <div id='losses' class="col-sm"><h5>Losses: <span id="lossScore1">0</span></h5></div>
+              <div id='wins' class="col-sm"><h5>Wins: <span id="winScore">0</span></h5></div>
+              <div id='losses' class="col-sm"><h5>Losses: <span id="lossScore">0</span></h5></div>
             </div>
           </div>
         </div>
+
       </div>
 
     </div>
-
-    <footer>
-      &copy; Copyright 2017 Craig Christensen
-    </footer>
-
     <script src="assets/javascript/game.js"></script>
   </body>
 </html>

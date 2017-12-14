@@ -13,7 +13,7 @@ $(document).ready(function(){
   var clinkAudio = $('#ping')[0];
   var successAudio = $('#success')[0];
   var breakAudio = $('#break')[0];
-  
+
   // get a random number between 19 and 120px
   getRdmNumber = function(min, max){
     return Math.floor(Math.random() * (max - min) + min);
@@ -34,41 +34,53 @@ $(document).ready(function(){
     message = "";
     guessTotal = 0;
     gemValues = [];
-    $("#guessTot").text(guessTotal);
-    $("#rdmNum").text(rdmNumber = getRdmNumber(19, 121));
-    $('#crystalsRow').show();
+    $("#guessTot").text(0);
+    $("#guessTot1").text(0);
+    $("#rdmNum, #rdmNum1").text(rdmNumber = getRdmNumber(19, 121));
     $('#messageRow').hide();
+    console.log(window.orientation);
+    if (window.orientation===0) {
+      $('#crystalsRow1').show();
+      $('#crystalsRow').hide();
+    }
+    else {
+      $('#crystalsRow1').hide();
+      $('#crystalsRow').show();
+    }
+    $('#guessTot').text(guessTotal);
     while (gemValues.length < 4) {  // generate random gem values between 1 and 12
       fillGemValues(y = Math.ceil(Math.random() * 12));
     }
   }
 
   // a couple of event handlers to add sound to the gems container on hover
-  $("#crystalsRow").mouseenter(function() {
+  $("#crystals").mouseenter(function() {
     hoverAudio.play();
   });
 
-  $("#crystalsRow").mouseleave(function() {
+  $("#crystals").mouseleave(function() {
     hoverAudio.pause();
   });
 
   // click handler for gems
   $(".image").on("click", function() {
     // accumulate guesses
-    guessTotal = (guessTotal + gemValues[$(this).attr('value')]);
-    $('#guessTot').text(guessTotal);
+    if (!isEnd) {
+      guessTotal = (guessTotal + gemValues[$(this).attr('value')]);
+      $('#guessTot, #guessTot1').text(guessTotal);      
+    }
     clinkAudio.play();
     // test for win or loss
     if (guessTotal === rdmNumber) {
       winCnt++;
-      $('#winScore').text(winCnt);
+      $('#winScore, #winScore1').text(winCnt);
       message = "You won!";
       isEnd = true;
       isWin = true;
     }
     else if (guessTotal > rdmNumber) {
       lossCnt++;
-      $('#lossScore').text(lossCnt);
+      $('#lossScore, #lossScore1').text(lossCnt);
       message = "You lost!";
       isEnd = true;
     }

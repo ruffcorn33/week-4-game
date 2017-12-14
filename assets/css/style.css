@@ -17,6 +17,7 @@ body {
   width: full;
 }
 
+
 #hint {
   font-size: 12px;
 }
@@ -52,7 +53,7 @@ body {
 
 hr {
   width: 80%;
-  height: 8px;
+  height: 2px;
   margin-left: auto;
   margin-right: auto;
   background-color:#fff;
@@ -83,49 +84,33 @@ img:hover{opacity: 1}
   margin: 0 auto 0 auto;
 }
 
+.landscape {
+  display: flex;
+}
+
+.portrait {
+  display: none;
+}
+
+#statsBox {
+  /* border: 5px solid green; */
+  color: white;
+}
 
 /* Media queries */
 
-/* desktop */
-@media only screen and (max-width: 980px) {
-
-  #crystalImage {
-    width: 120px;
-    height: 120px;
-  }
-
-  #goalBox,
-  #scoreBox {
-    max-width: 500px;
-  }
-
-}
-
-/* tablet */
-@media only screen and (max-width: 768px) {
-
-  #crystalImage {
-    width: 100px;
-    height: 100px;
-  }
-
-  #goalBox,
-  #scoreBox {
-    max-width: 400px;
-  }
-
-}
-
-/* phone */
-@media only screen and (max-width: 640px) {
-
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  /* Styles */
   .header h1 {
     font-size: 175%;
   }
 
   #crystalImage {
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
   }
 
   #crystalsRow {
@@ -134,11 +119,11 @@ img:hover{opacity: 1}
 
   #messageSpan {
     font-size: 80px;
-
   }
 
   #goalBox,
   #scoreBox {
+    background-image: url("../images/random_grey_variations.png");
     max-width: 350px;
   }
 
@@ -146,14 +131,246 @@ img:hover{opacity: 1}
   #losses {
     max-width: 150px;
   }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-height : 412px)
+and (orientation: landscape) {
+  /* Styles */
+  .landscape {
+    display: flex;
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  #crystalImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  #goalBoxContainer,
+  #scoreBoxContainer {
+    display: none;
+  }
+
+  #StatsBox {
+    display: flex;
+  }
+
+  #goalBox,
+  #scoreBox {
+    max-width: 250px;
+    height: 120px
+  }
+
+  #scoreBox {
+    padding-top: 40px;
+  }
+
+  #wins,
+  #losses {
+    font-size: 110%
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px)
+and (orientation: portrait)  {
+/* Styles */
+  .landscape {
+    display: none;
+  }
+
+  .portrait {
+    display: flex;
+  }
+
+  #crystalImage {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+  /* Styles */
+  .header h1 {
+    font-size: 175%;
+  }
+
+  #crystalImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  #crystalsRow {
+    padding: 20px;
+  }
+
+  #messageSpan {
+    font-size: 80px;
+  }
+}
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Portrait */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+  /* Styles */
+  .landscape {
+    display: none;
+  }
+
+  .portrait {
+    display: flex;
+  }
+
+  #crystalImage {
+    width: 100px;
+    height: 100px;
+  }
+}
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+  /* Styles */
+  .landscape {
+    display: flex;
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  #crystalImage {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  /* Styles */
+  /* .landscape {
+    display: flex;
+  }
+
+  .portrait {
+    display: none;
+  } */
+
+  #crystalImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  #goalBox,
+  #scoreBox {
+    max-width: 400px;
+  }
+}
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+  .landscape {
+    display: flex;
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  #crystalImage {
+    width: 150px;
+    height: 150px;
+  }
+
+}
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+  .landscape {
+    display: none;
+  }
+
+  .portrait {
+    display: flex;
+  }
+
+  #crystalImage {
+    width: 200px;
+    height: 200px;
+  }
 
 }
 
-@media only screen and (max-width: 525px) {
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+  .landscape {
+    display: flex;
+  }
+
+  .portrait {
+    display: none;
+  }
 
   #goalBox,
-  #scoreBox  {
-    margin: 0 auto 0 auto;
+  #scoreBox {
+    max-width: 500px;
+  }
+
+  #crystalImage {
+    width: 180px;
+    height: 180px;
+  }
+
+  #goalBoxContainer,
+  #scoreBoxContainer {
+    display: none;
+  }
+
+  #StatsBox {
+    display: flex;
+    height: 100px;
+  }
+
+  #goalBox,
+  #scoreBox {
+    max-width: 350px;
+    height: 120px
+  }
+
+  #scoreBox {
+    padding-top: 40px;
+  }
+
+  #wins,
+  #losses {
+    font-size: 150%
   }
 
 }
