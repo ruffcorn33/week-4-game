@@ -9,25 +9,31 @@ $(document).ready(function(){
   var lossCnt = 0;
   var isEnd = false;
   var isWin = false;
-
-  getRdmNumber = function(min, max){ // get a random number between 19 and 120px
+  var hoverAudio = $("#imgBoxHover")[0];
+  var clinkAudio = $('#ping')[0];
+  var successAudio = $('#success')[0];
+  var breakAudio = $('#break')[0];
+  
+  // get a random number between 19 and 120px
+  getRdmNumber = function(min, max){
     return Math.floor(Math.random() * (max - min) + min);
   }
 
-  fillGemValues = function(x) { // if gem value is not already in array, push it to array
+  // if gem value is not already in array, push it to array
+  fillGemValues = function(x) {
     if (jQuery.inArray( y, gemValues ) === -1){
       gemValues.push(x);
     }
   }
 
-  start = function() { // init variables, get new random goal number, get hidden values for gems
+  // init variables, get new random goal number, get hidden values for gems
+  start = function() {
     debugger;
     isEnd = false;
     isWin = false;
     message = "";
     guessTotal = 0;
     gemValues = [];
-    // document.getElementById('guessTot').innerHTML = guessTotal;
     $("#guessTot").text(guessTotal);
     $("#rdmNum").text(rdmNumber = getRdmNumber(19, 121));
     $('#crystalsRow').show();
@@ -37,21 +43,20 @@ $(document).ready(function(){
     }
   }
 
+  // a couple of event handlers to add sound to the gems container on hover
   $("#crystalsRow").mouseenter(function() {
-    var hoverAudio = $("#imgBoxHover")[0];
     hoverAudio.play();
   });
 
   $("#crystalsRow").mouseleave(function() {
-    var hoverAudio = $("#imgBoxHover")[0];
     hoverAudio.pause();
   });
 
-  $(".image").on("click", function() { // click handler for gems
+  // click handler for gems
+  $(".image").on("click", function() {
     // accumulate guesses
     guessTotal = (guessTotal + gemValues[$(this).attr('value')]);
     $('#guessTot').text(guessTotal);
-    var clinkAudio = document.getElementById("ping");
     clinkAudio.play();
     // test for win or loss
     if (guessTotal === rdmNumber) {
@@ -72,18 +77,14 @@ $(document).ready(function(){
       $('#crystalsRow').hide();
       $('#messageRow').show();
       if (isWin) {
-        var successAudio = document.getElementById("success");
         successAudio.play();
         $('#messageRow').attr('color','green');
         $('#messageRow').html("<span id='messageSpan' class='text-success'>You won!</span>")
-        // $('#messageRow').html("<span id='messageSpan' class='text-success fade out'>You won!</span>")
       }
       else {
-        var breakAudio = document.getElementById("break");
         breakAudio.play();
         $('#messageRow').attr('color','red');
         $('#messageRow').html("<span id='messageSpan' class='text-danger'>You lost!</span>");
-        // $('#messageRow').html("<span id='messageSpan' class='text-danger fade out'>You lost!</span>");
       }
       setTimeout(function(){ start(); }, 3000);
     }

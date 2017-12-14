@@ -17,20 +17,25 @@ body {
   width: full;
 }
 
+#hint {
+  font-size: 12px;
+}
+
 #goalBox,
 #scoreBox {
   background-image: url("../images/random_grey_variations.png");
-  width: 300px;
+  width: 500px;
   padding: 20px;
   background-color: white;
   text-align: center;
   margin: 20px 0px 10px 0px;
   align-content: center;
   color: white;
+  max-width: 550px
 }
 
 #goalBox {
-  height: 130px;
+  height: 160px;
   border: 5px solid blue;
 }
 
@@ -89,10 +94,10 @@ img:hover{opacity: 1}
     height: 120px;
   }
 
-  /* #goalBox,
+  #goalBox,
   #scoreBox {
-    margin: 50px 0px 20px 0px;
-  } */
+    max-width: 500px;
+  }
 
 }
 
@@ -104,10 +109,10 @@ img:hover{opacity: 1}
     height: 100px;
   }
 
-  /* #goalBox,
+  #goalBox,
   #scoreBox {
-    margin: 40px 0px 20px 0px;
-  } */
+    max-width: 400px;
+  }
 
 }
 
@@ -116,19 +121,6 @@ img:hover{opacity: 1}
 
   .header h1 {
     font-size: 175%;
-  }
-
-  /* #iBtn {
-    display: none;
-  } */
-
-  /* #goalBox,
-  #scoreBox {
-    margin: 30px 0px 20px 0px;
-  } */
-
-  #scoreBox {
-    height: 100px;
   }
 
   #crystalImage {
@@ -142,8 +134,17 @@ img:hover{opacity: 1}
 
   #messageSpan {
     font-size: 80px;
-    color: green;
-    margin: 0 auto 0 auto;
+
+  }
+
+  #goalBox,
+  #scoreBox {
+    max-width: 350px;
+  }
+
+  #wins,
+  #losses {
+    max-width: 150px;
   }
 
 }
@@ -152,8 +153,7 @@ img:hover{opacity: 1}
 
   #goalBox,
   #scoreBox  {
-    margin-right: 0;
-    margin: 25px 20px 20px 20px;
+    margin: 0 auto 0 auto;
   }
 
 }

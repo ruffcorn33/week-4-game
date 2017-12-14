@@ -11,27 +11,30 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div id="audioElements">
 
-    <audio id="ping">
-      <source src="assets/sounds/ping.mp3" type="audio/mp3">
-      Your browser does not support mp3 files.
-    </audio>
+      <audio id="ping">
+        <source src="assets/sounds/ping.mp3" type="audio/mp3">
+        Your browser does not support mp3 files.
+      </audio>
 
-    <audio id="break">
-      <source src="assets/sounds/glass-break.wav" type="audio/wav">
-      Your browser does not support wav files.
-    </audio>
+      <audio id="break">
+        <source src="assets/sounds/glass-break.wav" type="audio/wav">
+        Your browser does not support wav files.
+      </audio>
 
-    <audio id="success">
-      <source src="assets/sounds/success.wav" type="audio/wav">
-      Your browser does not support wav files.
-    </audio>
+      <audio id="success">
+        <source src="assets/sounds/success.wav" type="audio/wav">
+        Your browser does not support wav files.
+      </audio>
 
-    <audio id="imgBoxHover" loop>
-      <source src="assets/sounds/imgBoxHover.wav" type="audio/wav">
-      Your browser does not support wav files.
-    </audio>
+      <audio id="imgBoxHover" loop>
+        <source src="assets/sounds/imgBoxHover.wav" type="audio/wav">
+        Your browser does not support wav files.
+      </audio>
 
+    </div>
+    
     <div class="header">
       <h1>Crystals Collector</h1>
     </div>
@@ -49,17 +52,18 @@
         </div>
       </div>
 
-      <div class="container align-content-center">
+      <div class="container justify-content-md-center mt-3">
 
-        <div class="row px-5 justify-content-md-center">
-          <div id = "goalBox" class="col-sm-4">
+        <div class="row justify-content-md-center">
+          <div id="goalBox" class="col-sm-12 mx-auto">
+            <p id="hint">Click the crystals to add up to the number below!</p>
             <h4 id="rdmNum">?</h4>
             <hr>
             <h4 id="guessTot">?</h4>
           </div>
         </div>
 
-        <div id="crystalsRow" class="row align-content-center">
+        <div id="crystalsRow" class="row justify-content-md-center">
           <div id= "imageBox" class="mx-auto">
             <div id="crystals" class="row">
               <img id="crystalImage" class="image" src="assets/images/crystalc3.png" alt="crystal" value=0>
@@ -70,13 +74,13 @@
           </div>
         </div>
 
-        <div id="messageRow" class="row align-content-center" style="display: none"></div>
+        <div id="messageRow" class="row justify-content-md-center" style="display: none"></div>
 
-        <div class="row px-5 justify-content-md-center">
-          <div id = "scoreBox" class="col-sm-4 pl-5">
-            <div class="row">
-              <div class="col-sm"><h5>Wins: <span id="winScore">0</span></h5></div>
-              <div class="col-sm"><h5>Losses: <span id="lossScore">0</span></h5></div>
+        <div class="row justify-content-md-center">
+          <div id = "scoreBox" class="col-sm-12 mx-auto">
+            <div class="row px-2">
+              <div id='wins' class="col-sm"><h5>Wins: <span id="winScore">0</span></h5></div>
+              <div id='losses' class="col-sm"><h5>Losses: <span id="lossScore">0</span></h5></div>
             </div>
           </div>
         </div>
